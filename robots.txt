@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://omar-aljaafari.github.io/website/sitemap.xml
