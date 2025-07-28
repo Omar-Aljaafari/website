@@ -186,7 +186,7 @@
           <!-- الشعار -->
           <div
             class="w-16 h-16 rounded-full overflow-hidden bg-gray-200 dark:bg-gray-700 flex items-center justify-center shadow-lg">
-            <img src="img/Logo_Omar_Al-Jaafari.jpg" alt="شعار شركة عمر الجعفري" class="object-cover w-full h-full"
+            <img src="img/Logo_Omar_Al-Jaafari.jpg" alt=" شركة عمر الجعفري" class="object-cover w-full h-full"
               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
             <div class="hidden text-white text-xs font-semibold text-center px-2" style="display: none;">شعار الشركة</div>
           </div>
@@ -745,17 +745,28 @@
             </div>
         </div>
     </footer>
+    <script>
+  // فتح/إغلاق القائمة
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenuDropdown = document.getElementById('mobileMenuDropdown');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenuDropdown.classList.toggle('hidden');
+  });
+
+  // إغلاق القائمة عند الضغط على أي رابط
+  const mobileLinks = mobileMenuDropdown.querySelectorAll('a');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenuDropdown.classList.add('hidden');
+    });
+  });
+</script>
+
     
     <script>
-  // تفعيل قائمة الجوال المنسدلة
-  const menuToggleBtn = document.getElementById('menuToggle');
-  const mobileMenuDropdown = document.getElementById('mobileMenuDropdown');
-  if (menuToggleBtn && mobileMenuDropdown) {
-    menuToggleBtn.addEventListener('click', () => {
-      mobileMenuDropdown.classList.toggle('hidden');
-    });
-  }
-
+  
+  
   // ترجمات النصوص بالعربية والإنجليزية
   const translations = {
     ar: {
@@ -914,5 +925,7 @@
     });
   }
 </script>
+
+
 </body>
 </html>
