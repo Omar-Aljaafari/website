@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة عمر الجعفري للاستيراد</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'arabic': ['Arial', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .logo-container {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .company-name {
+            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb);
+            background-size: 200% 200%;
+            animation: gradient 3s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transform-style: preserve-3d;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .product-card {
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .nav-item {
+            transition: all 0.3s ease;
+        }
+        
+        .nav-item:hover {
+            transform: translateY(-2px);
+            color: #667eea;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .dark .bg-white { background-color: #1f2937; }
+        .dark .text-gray-800 { color: #f3f4f6; }
+        .dark .text-gray-600 { color: #d1d5db; }
+        .dark .product-card { background: rgba(0, 0, 0, 0.3); }
+    </style>
+</head>
+<body class="font-arabic bg-gradient-to-br from-purple-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 min-h-screen">
+    
+    <!-- Header -->
+    <header class="bg-white dark:bg-gray-800 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo and Company Name -->
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <div class="logo-container w-16 h-16 rounded-full flex items-center justify-center">
+                        <i class="fas fa-building text-white text-2xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="company-name text-2xl md:text-3xl font-bold" data-ar="شركة عمر الجعفري للاستيراد" data-en="Omar Al-Jaafari Import Company">شركة عمر الجعفري للاستيراد</h1>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm" data-ar="جودة عالية منذ 2020" data-en="High Quality Since 2020">جودة عالية منذ 2020</p>
+                    </div>
+                </div>
+                
+                <!-- Language Toggle -->
+                <button id="langToggle" class="btn-primary text-white px-4 py-2 rounded-lg">
+                    <i class="fas fa-language mr-2"></i>
+                    <span data-ar="English" data-en="العربية">English</span>
+                </button>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="mt-4">
+                <ul class="flex flex-wrap gap-6">
+                    <li><a href="#home" class="nav-item text-gray-700 dark:text-gray-300 hover:text-purple-600 font-medium" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                    <li><a href="#about" class="nav-item text-gray-700 dark:text-gray-300 hover:text-purple-600 font-medium" data-ar="عن الشركة" data-en="About">عن الشركة</a></li>
+                    <li><a href="#products" class="nav-item text-gray-700 dark:text-gray-300 hover:text-purple-600 font-medium" data-ar="المنتجات" data-en="Products">المنتجات</a></li>
+                    <li><a href="#contact" class="nav-item text-gray-700 dark:text-gray-300 hover:text-purple-600 font-medium" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-6xl font-bold text-gray-800 dark:text-white mb-6" data-ar="مرحباً بكم في شركة عمر الجعفري" data-en="Welcome to Omar Al-Jaafari Company">مرحباً بكم في شركة عمر الجعفري</h2>
+            <p class="text-xl text-gray-600 dark:text-gray-300 mb-8" data-ar="نخدمكم منذ 2020 بأعلى معايير الجودة" data-en="Serving you since 2020 with the highest quality standards">نخدمكم منذ 2020 بأعلى معايير الجودة</p>
+            <a href="#products" class="btn-primary text-white px-8 py-4 rounded-full text-lg font-medium inline-block" data-ar="تصفح منتجاتنا" data-en="Browse Our Products">تصفح منتجاتنا</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12" data-ar="عن الشركة" data-en="About Company">عن الشركة</h2>
+            <div class="max-w-4xl mx-auto">
+                <p class="text-lg text-gray-600 dark:text-gray-300 text-center leading-relaxed" data-ar="تأسست شركة عمر الجعفري للإستيراد في عام 2020 لتلبية احتياجات السوق من المواد الغذائية عالية الجودة. نحن متخصصون في استيراد مجموعة متنوعة من المنتجات، بما في ذلك المواد الغذائية، مستلزمات الأطفال، الأدوية، والأجهزة والمستلزمات الطبية." data-en="Omar Al-Jaafari Import Company was established in 2020 to meet market needs for high-quality food products. We specialize in importing a variety of products, including food items, baby supplies, medicines, and medical equipment.">تأسست شركة عمر الجعفري للإستيراد في عام 2020 لتلبية احتياجات السوق من المواد الغذائية عالية الجودة. نحن متخصصون في استيراد مجموعة متنوعة من المنتجات، بما في ذلك المواد الغذائية، مستلزمات الأطفال، الأدوية، والأجهزة والمستلزمات الطبية.</p>
+                
+                <div class="grid md:grid-cols-4 gap-6 mt-12">
+                    <div class="text-center">
+                        <i class="fas fa-utensils text-4xl text-purple-600 mb-4"></i>
+                        <h3 class="font-bold text-gray-800 dark:text-white" data-ar="المواد الغذائية" data-en="Food Products">المواد الغذائية</h3>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-baby text-4xl text-purple-600 mb-4"></i>
+                        <h3 class="font-bold text-gray-800 dark:text-white" data-ar="مستلزمات الأطفال" data-en="Baby Supplies">مستلزمات الأطفال</h3>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-pills text-4xl text-purple-600 mb-4"></i>
+                        <h3 class="font-bold text-gray-800 dark:text-white" data-ar="الأدوية" data-en="Medicines">الأدوية</h3>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-stethoscope text-4xl text-purple-600 mb-4"></i>
+                        <h3 class="font-bold text-gray-800 dark:text-white" data-ar="المستلزمات الطبية" data-en="Medical Equipment">المستلزمات الطبية</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12" data-ar="منتجاتنا" data-en="Our Products">منتجاتنا</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Product 1: CREMO Menthe Fort -->
+                <div class="product-card rounded-2xl p-6 text-center">
+                    <div class="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center">
+                        <i class="fas fa-leaf text-white text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4" data-ar="كريمو بنكهة النعناع القوي" data-en="CREMO Menthe Fort">كريمو بنكهة النعناع القوي</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4" data-ar="منتج شهير من شركة ميشوك بمذاق النعناع القوي والمنعش" data-en="Famous product from Mishok company with strong and refreshing mint flavor">منتج شهير من شركة ميشوك بمذاق النعناع القوي والمنعش</p>
+                    
+                    <button class="details-btn text-purple-600 hover:text-purple-800 font-medium mb-4" data-product="cremo" data-ar="عرض التفاصيل" data-en="Show Details">عرض التفاصيل</button>
+                    
+                    <div class="product-details hidden fade-in" id="cremo-details">
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4" data-ar="منتج شهير من شركة ميشوك، يتميز بمذاق النعناع القوي والمنعش. يُعتبر خياراً مثالياً لعشاق النكهات القوية، حيث يجمع بين الحلاوة والانتعاش. يتم تصنيعه باحترافية عالية، مما يضمن جودة وذوقاً رفيعاً." data-en="A famous product from Mishok company, featuring strong and refreshing mint flavor. It's an ideal choice for lovers of strong flavors, combining sweetness and freshness. Manufactured with high professionalism, ensuring quality and refined taste.">منتج شهير من شركة ميشوك، يتميز بمذاق النعناع القوي والمنعش. يُعتبر خياراً مثالياً لعشاق النكهات القوية، حيث يجمع بين الحلاوة والانتعاش. يتم تصنيعه باحترافية عالية، مما يضمن جودة وذوقاً رفيعاً.</p>
+                    </div>
+                    
+                    <button class="order-btn btn-primary text-white px-6 py-3 rounded-lg font-medium w-full" data-product="كريمو بنكهة النعناع القوي" data-product-en="CREMO Menthe Fort">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        <span data-ar="اطلب المنتج الآن" data-en="Order Now">اطلب المنتج الآن</span>
+                    </button>
+                </div>
+
+                <!-- Product 2: Cool Fresh -->
+                <div class="product-card rounded-2xl p-6 text-center">
+                    <div class="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-full flex items-center justify-center">
+                        <i class="fas fa-snowflake text-white text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4" data-ar="كول فريش" data-en="Cool Fresh">كول فريش</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4" data-ar="تجربة انتعاش مميزة مع نكهة النعناع المميزة" data-en="Distinctive refreshing experience with unique mint flavor">تجربة انتعاش مميزة مع نكهة النعناع المميزة</p>
+                    
+                    <button class="details-btn text-purple-600 hover:text-purple-800 font-medium mb-4" data-product="cool-fresh" data-ar="عرض التفاصيل" data-en="Show Details">عرض التفاصيل</button>
+                    
+                    <div class="product-details hidden fade-in" id="cool-fresh-details">
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4" data-ar="منتج يهدف إلى تقديم تجربة انتعاش مميزة، ويحتوي على نكهة النعناع المميزة التي تمنح شعوراً بالبرودة. مثالي للاستخدام كوجبة خفيفة أو بعد الوجبات، حيث يساعد على إنعاش النفس وتحسين المزاج." data-en="A product that aims to provide a distinctive refreshing experience, containing unique mint flavor that gives a cool feeling. Perfect for use as a light snack or after meals, helping to refresh breath and improve mood.">منتج يهدف إلى تقديم تجربة انتعاش مميزة، ويحتوي على نكهة النعناع المميزة التي تمنح شعوراً بالبرودة. مثالي للاستخدام كوجبة خفيفة أو بعد الوجبات، حيث يساعد على إنعاش النفس وتحسين المزاج.</p>
+                    </div>
+                    
+                    <button class="order-btn btn-primary text-white px-6 py-3 rounded-lg font-medium w-full" data-product="كول فريش" data-product-en="Cool Fresh">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        <span data-ar="اطلب المنتج الآن" data-en="Order Now">اطلب المنتج الآن</span>
+                    </button>
+                </div>
+
+                <!-- Product 3: Menthol Mint -->
+                <div class="product-card rounded-2xl p-6 text-center">
+                    <div class="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-emerald-400 to-teal-600 rounded-full flex items-center justify-center">
+                        <i class="fas fa-mint text-white text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4" data-ar="مانثول نعناع" data-en="Menthol Mint">مانثول نعناع</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4" data-ar="نكهة النعناع المانثول القوية والمركزة" data-en="Strong and concentrated menthol mint flavor">نكهة النعناع المانثول القوية والمركزة</p>
+                    
+                    <button class="details-btn text-purple-600 hover:text-purple-800 font-medium mb-4" data-product="menthol-mint" data-ar="عرض التفاصيل" data-en="Show Details">عرض التفاصيل</button>
+                    
+                    <div class="product-details hidden fade-in" id="menthol-mint-details">
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4" data-ar="يتميز بنكهة النعناع المانثول القوية، مما يمنحه طعماً فريداً ومنعشاً. يُعتبر خياراً رائعاً لمن يحبون النكهات القوية والمركزة، ويُستخدم غالباً في الحلويات والمشروبات." data-en="Features strong menthol mint flavor, giving it a unique and refreshing taste. It's an excellent choice for those who love strong and concentrated flavors, often used in sweets and beverages.">يتميز بنكهة النعناع المانثول القوية، مما يمنحه طعماً فريداً ومنعشاً. يُعتبر خياراً رائعاً لمن يحبون النكهات القوية والمركزة، ويُستخدم غالباً في الحلويات والمشروبات.</p>
+                    </div>
+                    
+                    <button class="order-btn btn-primary text-white px-6 py-3 rounded-lg font-medium w-full" data-product="مانثول نعناع" data-product-en="Menthol Mint">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        <span data-ar="اطلب المنتج الآن" data-en="Order Now">اطلب المنتج الآن</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</h2>
+            <div class="max-w-md mx-auto">
+                <div class="flex items-center justify-center mb-4">
+                    <i class="fas fa-envelope text-purple-600 text-xl mr-3"></i>
+                    <span class="text-gray-600 dark:text-gray-300">omar.aljaafari.business@gmail.com</span>
+                </div>
+                <div class="flex items-center justify-center mb-4">
+                    <i class="fas fa-phone text-purple-600 text-xl mr-3"></i>
+                    <span class="text-gray-600 dark:text-gray-300">+967772089702</span>
+                </div>
+                <div class="flex items-center justify-center">
+                    <i class="fab fa-whatsapp text-green-500 text-xl mr-3"></i>
+                    <span class="text-gray-600 dark:text-gray-300" data-ar="متاح على الواتساب" data-en="Available on WhatsApp">متاح على الواتساب</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p data-ar="© 2024 شركة عمر الجعفري للاستيراد. جميع الحقوق محفوظة." data-en="© 2024 Omar Al-Jaafari Import Company. All rights reserved.">© 2024 شركة عمر الجعفري للاستيراد. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Dark mode detection
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // Language toggle functionality
+        let currentLang = 'ar';
+        const langToggle = document.getElementById('langToggle');
+        
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            
+            // Update page direction and language
+            if (currentLang === 'en') {
+                document.documentElement.setAttribute('lang', 'en');
+                document.documentElement.setAttribute('dir', 'ltr');
+            } else {
+                document.documentElement.setAttribute('lang', 'ar');
+                document.documentElement.setAttribute('dir', 'rtl');
+            }
+            
+            // Update all text elements
+            const elements = document.querySelectorAll('[data-ar][data-en]');
+            elements.forEach(element => {
+                if (currentLang === 'en') {
+                    element.textContent = element.getAttribute('data-en');
+                } else {
+                    element.textContent = element.getAttribute('data-ar');
+                }
+            });
+        }
+        
+        langToggle.addEventListener('click', toggleLanguage);
+
+        // Product details toggle
+        document.querySelectorAll('.details-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const productId = this.getAttribute('data-product');
+                const details = document.getElementById(productId + '-details');
+                
+                if (details.classList.contains('hidden')) {
+                    details.classList.remove('hidden');
+                    this.textContent = currentLang === 'ar' ? 'إخفاء التفاصيل' : 'Hide Details';
+                } else {
+                    details.classList.add('hidden');
+                    this.textContent = currentLang === 'ar' ? 'عرض التفاصيل' : 'Show Details';
+                }
+            });
+        });
+
+        // WhatsApp order functionality
+        document.querySelectorAll('.order-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const productAr = this.getAttribute('data-product');
+                const productEn = this.getAttribute('data-product-en');
+                const product = currentLang === 'ar' ? productAr : productEn;
+                const phoneNumber = '967772089702';
+                
+                const message = currentLang === 'ar' ? 
+                    `السلام عليكم شركة عمر الجعفري للاستيراد، أريد الاستعلام عن المنتج: ${product}` :
+                    `Hello Omar Al-Jaafari Import Company, I want to inquire about the product: ${product}`;
+                
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
