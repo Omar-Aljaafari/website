@@ -749,14 +749,26 @@
         });
     </script>
 
-    <script>
+<script>
   const menuToggle = document.getElementById("menuToggle");
   const mobileMenu = document.getElementById("mobileMenu");
+  const navLinks = mobileMenu.querySelectorAll("a");
 
+  // تبديل إظهار/إخفاء القائمة عند الضغط على الزر
   menuToggle.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
   });
+
+  // عند الضغط على أي رابط، يتم إخفاء القائمة (في الشاشات الصغيرة فقط)
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth < 640) { // أقل من sm
+        mobileMenu.classList.add("hidden");
+      }
+    });
+  });
 </script>
+
 
 </body>
 </html>
